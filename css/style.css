@@ -55,6 +55,8 @@ button {
 }
 
 img {
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 
@@ -171,13 +173,14 @@ header {
   font-weight: 600;
   line-height: 36px;
   font-size: 28px;
+  text-align: center;
+  text-align: start;
 }
 
 .about__desc {
-  font-style: 14px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 19px;
-  font-size: 14px;
   padding: 16px 0 9px;
 }
 
@@ -187,6 +190,12 @@ header {
   font-weight: 400;
   color: #ED4C5C;
   padding: 0;
+  transition: 250ms;
+}
+
+.about__btn:hover,
+.about__btn:focus {
+  text-shadow: 1px 3px 10px #8c8885;
 }
 
 .about__img {
@@ -194,6 +203,66 @@ header {
   margin: 0 auto;
   max-width: 100%;
   border-radius: 6px;
+}
+
+.tech {
+  padding: 36px 0;
+}
+
+.tech__title {
+  font-weight: 600;
+  line-height: 36px;
+  font-size: 28px;
+  text-align: center;
+  padding: 0 0 46px;
+}
+
+.tect__column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 255px;
+  height: 226px;
+  margin: 0 auto;
+}
+
+.tech__number {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-size: 100px;
+  font-weight: 700;
+  color: rgba(16, 16, 16, 0.08);
+}
+
+.tech__subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  padding: 129px 0 0;
+}
+
+.tech__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+  padding: 10px 0 0;
+  width: 100%;
+}
+
+.tech__svg {
+  position: absolute;
+  top: 25%;
+  left: calc(50% - 31px);
+  width: 62px;
+  height: 62px;
+}
+
+.tech__svg--size {
+  width: 42px;
+  height: 48px;
 }
 
 @media screen and (min-width: 380px) {
@@ -228,6 +297,10 @@ header {
   .about__img {
     width: 385px;
   }
+
+  .tech__text {
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -245,63 +318,61 @@ header {
     width: 52%;
   }
 
+  .about__title {
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  .about {
+    padding: 65px 0;
+  }
+
   .about__wrapp {
-    position: relative;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: (1fr)[2];
-    grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: "title title" "photo desc";
+    display: flex;
   }
 
   .about__title {
     display: block;
-    width: 60%;
-    grid-area: title title;
+    width: 80%;
   }
 
   .about__desc {
-    display: -ms-grid;
-    display: grid;
+    display: block;
     align-items: center;
     width: 80%;
-    padding: 0;
-    grid-area: desc;
+    padding: 20px 0 9px;
   }
 
   .about__img {
     width: 350px;
     height: 258px;
-    margin: 0;
     padding: 0;
-    grid-area: photo;
   }
 
-  .about__btn {
-    position: absolute;
-    right: 0%;
-    bottom: 17%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-
-  .about__desc {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
+  .tech__title {
+    font-size: 36px;
+    line-height: 43px;
   }
 
-  .about__img {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
+  .tech__row {
+    justify-content: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (256px)[2];
+    grid-template-columns: repeat(2, 256px);
+    -ms-grid-rows: (225px)[2];
+    grid-template-rows: repeat(2, 225px);
+    grid-gap: 30px 90px;
+    margin: 0 auto;
+  }
+
+  .tech__subtitle {
+    padding: 139px 0 0;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .container {
-    padding: 0 30px;
     max-width: 964px;
   }
 
@@ -424,7 +495,6 @@ header {
     display: block;
     align-items: center;
     width: 100%;
-    padding: 24px 0 0 0;
   }
 
   .about__img {
@@ -436,14 +506,34 @@ header {
   }
 
   .about__btn {
-    left: 0;
-    top: 85%;
+    text-align: start;
+  }
+
+  .tech {
+    padding: 63px 0 104px;
+  }
+
+  .tech__title {
+    padding: 0 0 56px;
+  }
+
+  .tech__row {
+    display: flex;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .container {
-    padding: 0 60px;
-    max-width: 1320px;
+    padding: 0 80px;
+    max-width: 1280px;
+  }
+
+  .about__title {
+    width: 80%;
+  }
+
+  .about__desc {
+    width: 65%;
+    padding: 34px 0 15px;
   }
 }
