@@ -60,7 +60,7 @@ img {
   display: block;
 }
 
-.background-color {
+.header--background-color {
   background-image: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url("../img/bcg-hero.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -261,6 +261,7 @@ header {
 }
 
 .tech__svg--size {
+  left: calc(50% - 21px);
   width: 42px;
   height: 48px;
 }
@@ -517,8 +518,33 @@ header {
     padding: 0 0 56px;
   }
 
+  .tech__text {
+    width: 90%;
+  }
+
   .tech__row {
-    display: flex;
+    grid-gap: 40px 120px;
+  }
+
+  .tect__column {
+    margin: 0;
+  }
+
+  .tech__svg {
+    position: absolute;
+    left: calc(50% - 35px);
+    width: 70px;
+    height: 70px;
+  }
+
+  .tech__svg--size-search {
+    height: 62px;
+  }
+
+  .tech__svg--size {
+    left: calc(50% - 31px);
+    width: 62px;
+    height: 54px;
   }
 }
 
@@ -528,6 +554,20 @@ header {
     max-width: 1280px;
   }
 
+  .header--background-color {
+    height: 100vh;
+  }
+
+  .hero {
+    padding: 167px 0 187px;
+  }
+
+  .hero__subtitle {
+    font-size: 24px;
+    padding: 39px 0;
+    width: 40%;
+  }
+
   .about__title {
     width: 80%;
   }
@@ -535,5 +575,18 @@ header {
   .about__desc {
     width: 65%;
     padding: 34px 0 15px;
+  }
+
+  .tech__row {
+    display: flex;
+    grid-gap: 0 0;
+  }
+
+  .tect__column {
+    margin-right: auto;
+  }
+
+  .tect__column:last-child {
+    margin-right: 0;
   }
 }
