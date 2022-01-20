@@ -355,20 +355,25 @@ header {
   padding-right: 20px;
 }
 
-.focused__icon--google {
+.focused__icon:hover,
+.focused__icon:focus {
+  filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.3));
+  transform: translateY(4px);
+}
+
+.focused__icon--google-size {
   width: 28px;
   height: 27px;
 }
 
-.focused__icon--app-store {
+.focused__icon--app-store-size {
   width: 28px;
   height: 27px;
 }
 
-.focused__icon--windows {
+.focused__icon--windows-size {
   width: 22px;
   height: 25px;
-  align-items: center;
 }
 
 .focused__img {
@@ -376,6 +381,66 @@ header {
   border-radius: 15px;
   margin: 0 auto;
   padding: 25px 0 0;
+}
+
+footer {
+  padding: 45px 0;
+  background-color: #FAFAFA;
+}
+
+.foo__content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.foo__column {
+  padding: 36px 0 0;
+}
+
+.foo__column:nth-child(1) {
+  padding: 0;
+}
+
+.foo__title {
+  padding: 0 0 18px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.foo-address__location {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+  font-style: normal;
+}
+
+.foo-nav__link {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #000;
+}
+
+.foo-contact__connect {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #000;
+}
+
+.foo-contact__networks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foo-contact__link {
+  padding: 0 16px 0 0;
+}
+
+.foo-contact__link:nth-child(3) {
+  padding: 0;
 }
 
 @media screen and (min-width: 380px) {
@@ -425,6 +490,18 @@ header {
 
   .focused__img {
     width: 385px;
+  }
+
+  .foo-address__location {
+    font-size: 14px;
+  }
+
+  .foo-nav__link {
+    font-size: 14px;
+  }
+
+  .foo-contact__connect {
+    font-size: 14px;
   }
 }
 
@@ -727,20 +804,25 @@ header {
   }
 
   .focused__item {
+    display: block;
     padding-right: 28px;
   }
 
-  .focused__icon--google {
+  .focused__icon {
+    transition: 200ms;
+  }
+
+  .focused__icon--google-size {
     width: 32px;
     height: 32px;
   }
 
-  .focused__icon--app-store {
-    width: 28px;
-    height: 28px;
+  .focused__icon--app-store-size {
+    width: 30px;
+    height: 30px;
   }
 
-  .focused__icon--windows {
+  .focused__icon--windows-size {
     width: 26px;
     height: 26px;
   }
