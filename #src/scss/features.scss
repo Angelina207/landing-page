@@ -1,0 +1,42 @@
+.features{
+    background-color: $background-sec;
+    padding: 65px 0;
+}
+.features__title{
+    @include title;
+}
+.features__row{
+padding: 35px 0;
+}
+.features__img{ 
+    border-radius: 8px;
+    width: 274px;
+    margin: 0 auto;
+}
+.features__column{
+    text-align: center;
+    z-index: 100;
+    width: 224px;
+    height: 238px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+}
+.features__column--border-in{
+    padding: 30px 20px 25px;
+}
+.features__subtitle{
+    @include subtitle;
+    width: 70%;
+    margin: 0 auto;
+}
+.features__desc{
+    @include text;
+    padding: 20px 0 25px;
+}
+.features__btn{
+    background-color: transparent;
+    color: $accent;
+    font-size: 12px;
+    font-weight: 700;
+}

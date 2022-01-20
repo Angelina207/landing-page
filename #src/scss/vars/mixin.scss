@@ -1,0 +1,29 @@
+@mixin title {
+    font-weight: 600;
+    line-height: 36px;
+    font-size: 28px;
+    text-align: center;
+
+    @media screen and(min-width: 768px) {
+        font-size: 36px;
+        line-height: 43px;
+    }
+}
+@mixin subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+}
+@mixin desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+}
+@mixin text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19px;
+    @media screen and(min-width: 480px) {
+        font-size: 14px;
+    }
+}

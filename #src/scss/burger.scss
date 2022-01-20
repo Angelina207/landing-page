@@ -1,0 +1,28 @@
+.head__burger {
+    margin: 3px 0 0;
+    display: block;
+}
+.head__burger--item{
+    width: 22px;
+    height: 2px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.head__burger--item2{
+    width: 22px;
+    height: 2px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+.head__burger--item3{
+    width: 22px;
+    height: 2px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+@media screen and(min-width: 1024px) {
+    .head__burger {
+        display: none;
+    }
+}
