@@ -19,6 +19,9 @@
 .focused__item{
     padding-right: 20px;
 }
+.focused__icon{
+    transition: 250ms;
+}
 .focused__icon:hover,
 .focused__icon:focus {
         filter: drop-shadow( 5px 5px 3px rgba(0,0,0,.3) );

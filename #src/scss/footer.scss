@@ -1,0 +1,163 @@
+footer {
+    padding: 45px 0;
+    background-color: $background-sec;
+}
+
+// общий контейнер для всех блоков
+
+.foo__content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+//  обёртка для блоков
+
+.foo__column {
+    padding: 36px 0 0;
+}
+.foo__column:nth-child(1) {
+    padding: 0;
+}
+
+// заголовки блоков
+
+.foo__title{
+    padding: 0 0 18px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+//  адрес
+
+.foo-address__location{
+    @include text;
+    display: inline-block;
+    text-align: center;
+    width: 70%;
+    font-style: normal;
+}
+
+// навигация сайта
+
+.foo-nav__link{
+    @include text;
+    color: #000;
+    padding: 6px 0 0;
+    transition: 250ms;
+    &:focus, 
+    &:hover {
+        color: $accent;
+        text-shadow: 2px 4px 5px rgba(0,0,0,0.23);
+    } 
+}
+.foo-nav__link:nth-child(1){
+    padding: 0;
+}
+
+// контакты
+
+.foo-contact__connect{
+    @include text;
+    color: #000;
+    &:focus, 
+    &:hover {
+        color: $accent;
+        text-shadow: 2px 4px 5px rgba(0,0,0,0.23);
+    } 
+}
+.foo-contact__connect--padding{
+    padding: 11px 0;
+}
+
+// соц сети
+
+.foo-contact__networks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foo-contact__items{
+    padding: 0 16px 0 0;
+}
+.foo-contact__items:nth-child(3){
+    padding: 0;
+}
+.foo__svg{
+    fill: #000;
+    transition: 250ms;
+    &:hover,
+    &:focus{
+        fill: #ED4C5C;
+        filter: drop-shadow( 5px 5px 3px rgba(0,0,0,.3) );
+    }
+}
+// способы для оплаты
+
+.foo__img{
+    margin: 0 auto;
+}
+
+// нейминг компании
+
+.foo__company-name {
+    @include text;
+    text-align: center;
+    padding: 46px 0 0;
+}
+
+@media screen and(min-width: 480px) {
+    footer {
+        padding: 65px 0;
+    }
+}
+@media screen and(min-width: 768px) {
+    .foo__content{
+        flex-direction: row;
+        text-align: start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .foo__column {
+        padding: 0;
+        width: 26.5%;
+    }
+    .foo__column--padding-top{
+        padding: 46px 0 0;
+    }
+    .foo-address__location{
+        text-align: start;
+        width: 80%;
+    }
+    .foo-contact__networks{
+        display: flex;
+        justify-content: start;
+    }
+    .foo__img{
+        margin: 0;
+    }
+    .foo__company-name{
+        padding: 59px 0 0;
+    }
+}
+@media screen and(min-width: 1024px) {
+    footer {
+        padding: 85px 0;
+    }
+    .foo__column {
+        padding: 0;
+        width: 22.5%;
+    }
+    .foo__company-name{
+        padding: 86px 0 0;
+    }
+}
+@media screen and(min-width: 1440px) {
+    .foo__column {
+        padding: 0;
+        width: 18.5%;
+    }
+    .foo__company-name{
+        text-align: start;
+    }
+}
