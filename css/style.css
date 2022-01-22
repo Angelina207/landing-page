@@ -52,12 +52,22 @@ button {
   cursor: pointer;
   font-weight: 600;
   font-size: 14px;
+  font-family: "Lato", sans-serif;
 }
 
 img {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  -moz-appearance: none;
+  resize: none;
 }
 
 .header--background-color {
@@ -355,6 +365,10 @@ header {
   padding-right: 20px;
 }
 
+.focused__icon {
+  transition: 250ms;
+}
+
 .focused__icon:hover,
 .focused__icon:focus {
   filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.3));
@@ -381,6 +395,124 @@ header {
   border-radius: 15px;
   margin: 0 auto;
   padding: 25px 0 0;
+}
+
+.form {
+  background-color: #fff;
+  padding: 36px 0;
+}
+
+.form-head__title {
+  font-weight: 600;
+  line-height: 36px;
+  font-size: 28px;
+  text-align: center;
+  text-align: start;
+}
+
+.form-head__desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: start;
+  padding: 16px 0 28px;
+}
+
+.form__content {
+  width: 280px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.form__style {
+  border: solid 1px #333333;
+  border-radius: 6px;
+  height: 40px;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  margin: 24px 0 0;
+}
+
+.form__style--top {
+  margin: 0;
+}
+
+.form__style::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 12px 0 0 22px;
+}
+
+.form__style:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 12px 0 0 22px;
+}
+
+.form__style::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 12px 0 0 22px;
+}
+
+.form__style:hover,
+.form__style:focus {
+  border: solid 1px #ED4C5C;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+
+.form__name-style:focus,
+.form__name-style:hover {
+  border: solid 1px #ED4C5C;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+
+.form__name-style:focus::-moz-placeholder, .form__name-style:hover::-moz-placeholder {
+  color: #ED4C5C;
+}
+
+.form__name-style:focus:-ms-input-placeholder, .form__name-style:hover:-ms-input-placeholder {
+  color: #ED4C5C;
+}
+
+.form__name-style:focus::placeholder,
+.form__name-style:hover::placeholder {
+  color: #ED4C5C;
+}
+
+.form__style:focus::-moz-placeholder, .form__style:hover::-moz-placeholder {
+  color: #ED4C5C;
+}
+
+.form__style:focus:-ms-input-placeholder, .form__style:hover:-ms-input-placeholder {
+  color: #ED4C5C;
+}
+
+.form__style:focus::placeholder,
+.form__style:hover::placeholder {
+  color: #ED4C5C;
+}
+
+.form__btn {
+  display: flex;
+}
+
+.form__btn-style {
+  width: 160px;
+  height: 50px;
+  border-radius: 6px;
+  background-color: #ED4C5C;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  transition: 250ms;
+  margin: 26px auto 0;
+}
+
+.form__btn-style:hover,
+.form__btn-style:focus {
+  box-shadow: 1px 3px 10px #8c8885;
 }
 
 footer {
@@ -412,6 +544,9 @@ footer {
   font-size: 12px;
   font-weight: 400;
   line-height: 19px;
+  display: inline-block;
+  text-align: center;
+  width: 70%;
   font-style: normal;
 }
 
@@ -420,6 +555,18 @@ footer {
   font-weight: 400;
   line-height: 19px;
   color: #000;
+  padding: 6px 0 0;
+  transition: 250ms;
+}
+
+.foo-nav__link:focus,
+.foo-nav__link:hover {
+  color: #ED4C5C;
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.23);
+}
+
+.foo-nav__link:nth-child(1) {
+  padding: 0;
 }
 
 .foo-contact__connect {
@@ -429,18 +576,51 @@ footer {
   color: #000;
 }
 
+.foo-contact__connect:focus,
+.foo-contact__connect:hover {
+  color: #ED4C5C;
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.23);
+}
+
+.foo-contact__connect--padding {
+  padding: 11px 0;
+}
+
 .foo-contact__networks {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.foo-contact__link {
+.foo-contact__items {
   padding: 0 16px 0 0;
 }
 
-.foo-contact__link:nth-child(3) {
+.foo-contact__items:nth-child(3) {
   padding: 0;
+}
+
+.foo__svg {
+  fill: #000;
+  transition: 250ms;
+}
+
+.foo__svg:hover,
+.foo__svg:focus {
+  fill: #ED4C5C;
+  filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.3));
+}
+
+.foo__img {
+  margin: 0 auto;
+}
+
+.foo__company-name {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  padding: 46px 0 0;
 }
 
 @media screen and (min-width: 380px) {
@@ -454,6 +634,10 @@ footer {
 
   .focused__img {
     width: 350px;
+  }
+
+  .form__content {
+    width: 320px;
   }
 }
 
@@ -502,6 +686,14 @@ footer {
 
   .foo-contact__connect {
     font-size: 14px;
+  }
+
+  .foo__company-name {
+    font-size: 14px;
+  }
+
+  footer {
+    padding: 65px 0;
   }
 }
 
@@ -604,6 +796,73 @@ footer {
     width: 350px;
     height: 258px;
     padding: 0;
+  }
+
+  .form-head__title {
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  .form {
+    padding: 65px 0;
+  }
+
+  .form__container {
+    display: flex;
+  }
+
+  .form__head {
+    width: 50%;
+  }
+
+  .form-head__title {
+    display: block;
+    width: 80%;
+  }
+
+  .form-head__desc {
+    display: block;
+    width: 80%;
+    padding: 26px 0 36px;
+  }
+
+  .form__content {
+    width: 350px;
+    margin: 0;
+  }
+
+  .foo__content {
+    flex-direction: row;
+    text-align: start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .foo__column {
+    padding: 0;
+    width: 26.5%;
+  }
+
+  .foo__column--padding-top {
+    padding: 46px 0 0;
+  }
+
+  .foo-address__location {
+    text-align: start;
+    width: 80%;
+  }
+
+  .foo-contact__networks {
+    display: flex;
+    justify-content: start;
+  }
+
+  .foo__img {
+    margin: 0;
+  }
+
+  .foo__company-name {
+    padding: 59px 0 0;
   }
 }
 
@@ -826,6 +1085,39 @@ footer {
     width: 26px;
     height: 26px;
   }
+
+  .form__content {
+    width: 540px;
+  }
+
+  .form__name {
+    display: flex;
+  }
+
+  .form__style--width {
+    width: 240px;
+  }
+
+  .form__style--margin {
+    margin: 0 0 0 30px;
+  }
+
+  .form__btn-style {
+    margin: 27px 0 0;
+  }
+
+  footer {
+    padding: 85px 0;
+  }
+
+  .foo__column {
+    padding: 0;
+    width: 22.5%;
+  }
+
+  .foo__company-name {
+    padding: 86px 0 0;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -894,5 +1186,36 @@ footer {
     height: 311px;
     margin: 0;
     padding: 0 0 0 130px;
+  }
+
+  .form {
+    padding: 117px 0 78px;
+  }
+
+  .form__head {
+    width: 58%;
+  }
+
+  .form-head__desc {
+    display: block;
+    width: 60%;
+    padding: 26px 0 36px;
+  }
+
+  .form__style--width {
+    width: 255px;
+  }
+
+  .form__style--margin {
+    margin: 0 0 0 28px;
+  }
+
+  .foo__column {
+    padding: 0;
+    width: 18.5%;
+  }
+
+  .foo__company-name {
+    text-align: start;
   }
 }
