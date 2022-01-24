@@ -76,9 +76,10 @@ textarea {
   background-repeat: no-repeat;
   background-position: center;
   color: #fff;
+  height: 100vh;
 }
 
-header {
+.head__wrapp {
   display: flex;
   padding: 25px 0;
   justify-content: space-between;
@@ -110,11 +111,14 @@ header {
 }
 
 .hero {
-  padding: 46px 0 40px;
   text-align: center;
   align-items: center;
   display: flex;
-  flex-direction: column;
+  height: 80%;
+}
+
+.hero__wrapp {
+  margin: auto;
 }
 
 .hero__title {
@@ -124,7 +128,7 @@ header {
 
 .hero__subtitle {
   display: inline-block;
-  padding: 22px 0;
+  padding: 26px 0 36px;
   font-size: 18px;
   width: 80%;
   line-height: 24px;
@@ -228,6 +232,7 @@ header {
 }
 
 .slide-container {
+  position: relative;
   width: 270px;
   height: 360px;
   margin: 0 auto;
@@ -313,6 +318,7 @@ header {
   width: 40px;
   height: 40px;
   transition: 250ms;
+  z-index: 200;
   margin: 0 auto;
 }
 
@@ -726,10 +732,6 @@ footer {
     max-width: 480px;
   }
 
-  .hero {
-    padding: 53px 0 78px;
-  }
-
   .hero__title {
     font-size: 48px;
   }
@@ -746,7 +748,11 @@ footer {
 
   .slide-container {
     width: 350px;
-    height: 420px;
+    height: 450px;
+  }
+
+  .features__list {
+    margin: 63px auto 0;
   }
 
   .features__item {
@@ -764,6 +770,7 @@ footer {
   }
 
   .features__subtitle {
+    width: 80%;
     padding: 33px 0 0;
   }
 
@@ -791,12 +798,19 @@ footer {
     max-width: 708px;
   }
 
+  .hero__wrapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .hero__title {
     font-size: 52px;
   }
 
   .hero__subtitle {
     font-size: 20px;
+    padding: 39px 0;
     width: 52%;
   }
 
@@ -833,6 +847,28 @@ footer {
   .features__title {
     font-size: 36px;
     line-height: 43px;
+  }
+
+  .feature__content-wrapp {
+    position: relative;
+  }
+
+  .slide-btn__wrapp {
+    display: block;
+  }
+
+  .slide-btn {
+    top: calc(50% - 20px);
+  }
+
+  .btn-next {
+    position: absolute;
+    right: 10%;
+  }
+
+  .btn-prev {
+    position: absolute;
+    left: 10%;
   }
 
   .tech__title {
@@ -959,9 +995,8 @@ footer {
     max-width: 964px;
   }
 
-  header {
-    padding: 38px 0;
-    justify-content: space-between;
+  .head__wrapp {
+    padding: 50px 0 25px;
   }
 
   .head__svg {
@@ -1038,10 +1073,6 @@ footer {
     box-shadow: 3px 14px 67px -4px rgba(235, 240, 244, 0.47);
   }
 
-  .hero {
-    padding: 128px 0 142px;
-  }
-
   .hero__title {
     font-size: 72px;
   }
@@ -1089,6 +1120,16 @@ footer {
 
   .about__btn {
     text-align: start;
+  }
+
+  .slide-container {
+    display: flex;
+    width: 100%;
+    overflow: inherit;
+  }
+
+  .slide-btn__wrapp {
+    display: none;
   }
 
   .tech {
@@ -1214,18 +1255,8 @@ footer {
     max-width: 1280px;
   }
 
-  .header--background-color {
-    height: 100vh;
-  }
-
-  .hero {
-    padding: 167px 0 187px;
-  }
-
   .hero__subtitle {
-    font-size: 24px;
-    padding: 39px 0;
-    width: 40%;
+    width: 50%;
   }
 
   .about__title {
