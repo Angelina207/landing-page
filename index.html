@@ -12,34 +12,48 @@
         <header>
             <div class="container">
                 <div class="head__wrapp">
-                    <a class="head__logo" href="#">
-                        <svg class="head__svg" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.605 8.05005C20.605 7.61505 20.75 7.18005 20.75 6.60005C20.75 3.41005 18.14 0.800049 14.95 0.800049C12.63 0.800049 10.745 2.10505 9.73001 3.99005C9.44001 3.84505 8.86001 3.70005 8.42501 3.70005C6.39501 3.70005 4.80001 5.29505 4.80001 7.32505C4.80001 7.61505 4.80001 7.90505 4.94501 8.05005C2.33501 8.48505 0.450012 10.515 0.450012 13.125C0.450012 15.88 2.77001 18.2 5.52501 18.2H20.025C22.78 18.2 25.1 15.88 25.1 13.125C25.1 10.515 23.215 8.34005 20.605 8.05005Z" fill="white"/>
-                        </svg>
-                            CLOUDBUDGET
-                    </a>
-                    <div class="head__burger">
-                        <div class="head__burger--item"></div>
-                        <div class="head__burger--item2"></div>
-                        <div class="head__burger--item3"></div>
+                    <div class="head-wrapp__logo">
+                        <a class="head__logo" href="#">
+                            <svg class="head__svg" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.605 8.05005C20.605 7.61505 20.75 7.18005 20.75 6.60005C20.75 3.41005 18.14 0.800049 14.95 0.800049C12.63 0.800049 10.745 2.10505 9.73001 3.99005C9.44001 3.84505 8.86001 3.70005 8.42501 3.70005C6.39501 3.70005 4.80001 5.29505 4.80001 7.32505C4.80001 7.61505 4.80001 7.90505 4.94501 8.05005C2.33501 8.48505 0.450012 10.515 0.450012 13.125C0.450012 15.88 2.77001 18.2 5.52501 18.2H20.025C22.78 18.2 25.1 15.88 25.1 13.125C25.1 10.515 23.215 8.34005 20.605 8.05005Z" fill="white"/>
+                            </svg>
+                                CLOUDBUDGET
+                        </a>
                     </div>
-                   <ul class="head__list">
-                       <li class="head__items">
-                           <a class="head__link" href="#">OVERVIEW</a>
-                        </li>
-                       <li class="head__items">
-                           <a class="head__link" href="#">FEATURES</a>
-                        </li>
-                       <li class="head__items">
-                           <a class="head__link" href="#">TECHNOLOGY</a>
-                        </li>
-                       <li class="head__items">
-                           <a class="head__link" href="#">CONTACT</a>
-                        </li>
-                       <li class="head__items">
-                           <a class="head__link" href="#">SING UP</a>
-                        </li>
-                   </ul>
+                    <div class="burger__menu">
+                        <a class="burger-menu__btn" href="#">
+                            <div class="burger-menu__lines"></div>
+                        </a>
+
+                        <nav id="menu" class="head__menu-nav">
+                            <ul class="head__list">
+                                <li class="head__items">
+                                    <a class="head__link" href="#about">OVERVIEW</a>
+                                 </li>
+                                 <hr class="head__line">
+                                <li class="head__items">
+                                    <a class="head__link" href="#features">FEATURES</a>
+                                 </li>
+                                 <hr class="head__line">
+                                <li class="head__items">
+                                    <a class="head__link" href="#technology">TECHNOLOGY</a>
+                                 </li>
+                                 <hr class="head__line">
+                                <li class="head__items">
+                                    <a class="head__link" href="#contact">CONTACT</a>
+                                 </li>
+                                 <hr class="head__line">
+                                <li class="head__items">
+                                    <a class="head__link" href="#sing-up">SING UP</a>
+                                 </li>
+                             </ul>
+                        </nav>
+
+                        <div class="burger-menu__overlay">
+
+                        </div>
+
+                    </div>
                     <button class="head__btn" type="button">
                         LOGIN
                     </button>
@@ -49,19 +63,19 @@
 
         <main class="hero">
             <div class="container">
-                    <div class="hero__wrapp">
-                        <h1 class="hero__title">CLOUDBUDGET</h1>
-                        <p class="hero__subtitle">Cloud budget management for everyone. Only €69.95 a Month After a 7 Day Trial of 
-                            Up to €4.99
-                        </p>
-                        <button class="hero__btn" type="button">
-                            SING UP
-                        </button>
-                    </div>
+                <div class="hero__wrapp">
+                    <h1 class="hero__title">CLOUDBUDGET</h1>
+                    <p class="hero__subtitle">Cloud budget management for everyone. Only €69.95 a Month After a 7 Day Trial of 
+                        Up to €4.99
+                    </p>
+                    <button class="hero__btn" type="button">
+                        SING UP
+                    </button>
+                </div>
             </div>
         </main>
 </div>
-    <main class="about">
+    <main id="about" class="about">
     <div class="container">
             <div class="about__wrapp">
                 <div class="about__content">
@@ -79,7 +93,7 @@
 </main>
     <main class="features">
     <div class="container">
-        <h2 class="features__title">
+        <h2 id="features" class="features__title">
             Features
         </h2>
 <div class="feature__content-wrapp">
@@ -146,7 +160,7 @@
 </div>
     </div>
 </main>
-    <main class="tech">
+    <main id="technology" class="tech">
     <div class="container">
         <h2 class="tech__title">
             Technology
@@ -199,7 +213,7 @@
         </div>
     </div>
 </main>
-    <main class="focused-sec">
+    <main id="sing-up" class="focused-sec">
     <div class="container">
     <div class="focused__wrapp">
         <div class="focused__content">
@@ -240,7 +254,7 @@
     </div>
     </div>
 </main>
-    <main class="form">
+    <main id="contact" class="form">
     <div class="container">
         <div class="form__container">
             <div class="form__head">
@@ -339,7 +353,6 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./js/features-slider.js"></script>
-    <script src="./js/burger.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

@@ -79,10 +79,84 @@ textarea {
   height: 100vh;
 }
 
+.burger-menu__btn {
+  position: relative;
+  display: inline-block;
+  top: 2px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  z-index: 30;
+  background-color: #fff;
+}
+
+.burger-menu__lines,
+.burger-menu__lines::before,
+.burger-menu__lines::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #ED4C5C;
+  border-radius: 8px;
+  left: calc(50% - 10px);
+  top: calc(50% - 1px);
+  transition: 250ms;
+}
+
+.burger-menu__lines::before {
+  top: -6px;
+}
+
+.burger-menu__lines::after {
+  top: 6px;
+}
+
+.burger-menu__active .burger-menu__lines {
+  background-color: transparent;
+}
+
+.burger-menu__active .burger-menu__lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.burger-menu__active .burger-menu__lines::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-menu__active .burger-menu__btn {
+  position: fixed;
+  margin: 20px 20px 0 0;
+}
+
+.burger-menu__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  z-index: 10;
+}
+
+.burger-menu__active .burger-menu__overlay {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .head__wrapp {
   display: flex;
   padding: 25px 0;
   justify-content: space-between;
+}
+
+.head-wrapp__logo {
+  display: flex;
+  align-items: center;
 }
 
 .head__svg {
@@ -94,6 +168,7 @@ textarea {
 }
 
 .head__logo {
+  display: inline-block;
   position: relative;
   padding: 0 0 0 32px;
   font-size: 15px;
@@ -102,8 +177,45 @@ textarea {
   letter-spacing: 0.03em;
 }
 
+.head__menu-nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  transition: 250ms;
+  z-index: 20;
+  background-color: #fff;
+}
+
+.burger-menu__active .head__menu-nav {
+  right: 0;
+}
+
 .head__list {
-  display: none;
+  padding: 80px 40px;
+}
+
+.head__line {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  border: none;
+  margin: 20px 0;
+  background: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%);
+}
+
+.head__link {
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  transition: 250ms;
+}
+
+.head__link:hover,
+.head__link:focus {
+  text-shadow: 1px 3px 10px #8c8885;
+  color: #ED4C5C;
 }
 
 .head__btn {
@@ -151,36 +263,9 @@ textarea {
   border: solid 1px #fff;
 }
 
-.head__burger {
-  margin: 3px 0 0;
-  display: block;
-}
-
-.head__burger--item {
-  width: 22px;
-  height: 2px;
-  border-radius: 8px;
-  background-color: #fff;
-}
-
-.head__burger--item2 {
-  width: 22px;
-  height: 2px;
-  border-radius: 8px;
-  background-color: #fff;
-  margin: 4px 0;
-}
-
-.head__burger--item3 {
-  width: 22px;
-  height: 2px;
-  border-radius: 8px;
-  background-color: #fff;
-}
-
 .about {
   background-color: #fff;
-  padding: 36px 0;
+  padding: 65px 0;
 }
 
 .about__title {
@@ -261,7 +346,7 @@ textarea {
   position: absolute;
   top: 60%;
   left: calc(50% - 115px);
-  z-index: 100;
+  z-index: 5;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
@@ -318,7 +403,7 @@ textarea {
   width: 40px;
   height: 40px;
   transition: 250ms;
-  z-index: 200;
+  z-index: 5;
   margin: 0 auto;
 }
 
@@ -334,7 +419,7 @@ textarea {
 }
 
 .tech {
-  padding: 36px 0;
+  padding: 65px 0;
 }
 
 .tech__title {
@@ -732,6 +817,10 @@ footer {
     max-width: 480px;
   }
 
+  .head__menu-nav {
+    width: 320px;
+  }
+
   .hero__title {
     font-size: 48px;
   }
@@ -817,10 +906,6 @@ footer {
   .about__title {
     font-size: 36px;
     line-height: 43px;
-  }
-
-  .about {
-    padding: 65px 0;
   }
 
   .about__wrapp {
@@ -1011,6 +1096,10 @@ footer {
     align-items: center;
   }
 
+  .head__menu {
+    display: none;
+  }
+
   .head__list {
     display: flex;
     align-items: center;
@@ -1027,8 +1116,6 @@ footer {
   .head__link {
     position: relative;
     color: #fff;
-    font-size: 14px;
-    font-weight: 400;
   }
 
   .head__link::before {
@@ -1133,7 +1220,7 @@ footer {
   }
 
   .tech {
-    padding: 63px 0 104px;
+    padding: 65px 0 104px;
   }
 
   .tech__title {
