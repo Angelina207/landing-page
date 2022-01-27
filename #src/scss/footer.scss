@@ -60,6 +60,7 @@ footer {
 .foo-contact__connect{
     @include text;
     color: #000;
+    transition: 250ms;
     &:focus, 
     &:hover {
         color: $accent;

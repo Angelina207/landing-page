@@ -1,6 +1,6 @@
 .about {
     background-color: #fff;
-    padding: 36px 0;
+    padding: 65px 0;
 }
 .about__title{
     @include title;
@@ -35,9 +35,6 @@
     }
 }
 @media screen and(min-width: 768px) {
- .about {
-     padding: 65px 0;
- }
  .about__wrapp{
      display: flex;
  }

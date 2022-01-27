@@ -12,6 +12,7 @@
 // Стили слайдера
 
 .slide-container{
+    position: relative;
     width: 270px;
     height: 360px;
     margin: 0 auto;
@@ -40,7 +41,7 @@
     position: absolute;
     top: 60%;
     left: calc(50% - 115px);
-    z-index: 100;
+    z-index: 5;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
@@ -82,10 +83,10 @@
 
 // Стили для кнопок слайда
 
-.slide-btn__wrapp{
-    display: flex;
-    justify-content: center;
-}
+ .slide-btn__wrapp{
+     display: flex;
+     justify-content: center;
+ }
 .slide-btn{
     position: relative;
     background-color: $accent;
@@ -93,6 +94,7 @@
     width: 40px;
     height: 40px;
     transition: 250ms;
+    z-index: 5;
     margin: 0 auto;
     &:hover,
     &:focus {
@@ -138,9 +140,11 @@ left: calc(50% - 10px);
     
     .slide-container{
         width: 350px;
-        height: 420px;
+        height: 450px;
      }
-
+     .features__list{
+        margin: 63px auto 0;
+    }
     //  Стили карточек
     
     .features__item{
@@ -157,6 +161,7 @@ left: calc(50% - 10px);
         height: 250px;
     }
     .features__subtitle{
+        width: 80%;
         padding: 33px 0 0;
     }
     .features__desc{
@@ -168,4 +173,34 @@ left: calc(50% - 10px);
     }
 }
 
+@media screen and(min-width: 768px) {
+.feature__content-wrapp{
+    position: relative;
+}
+.slide-btn__wrapp{
+    display: block;
+}
+.slide-btn{
+    top: calc(50% - 20px);
+}
+.btn-next{
+    position: absolute;
+    right: 10%;
+    }
+.btn-prev{
+    position: absolute;
+    left: 10%;
+    }
+}
 
+@media screen and(min-width: 1024px) {
+    .slide-container{
+        display: flex;
+        width: 100%;
+        overflow: inherit;
+     } 
+    
+    .slide-btn__wrapp{
+        display: none;
+    }
+}

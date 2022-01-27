@@ -1,5 +1,5 @@
 .focused-sec{
-    padding: 36px 0;
+    padding: 65px 0;
     background-color: #ED4C5C;
 }
 .focused__title{
@@ -53,9 +53,6 @@
 }
 
 @media screen and(min-width: 768px) {
-    .focused-sec{
-        padding: 65px 0;
-        }
     .focused__wrapp{
         display: flex;
     }

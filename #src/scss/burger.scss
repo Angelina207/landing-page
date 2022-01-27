@@ -1,28 +1,93 @@
-.head__burger {
-    margin: 3px 0 0;
+.burger-menu__btn{
+    position: relative;
+    display: inline-block;
+    top: 2px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    z-index: 30;
+    background-color: #fff;
+}
+.burger-menu__lines,
+.burger-menu__lines::before,
+.burger-menu__lines::after {
+    @include burger;
+    top: calc(50% - 1px);
+    transition: 250ms;
+}
+.burger-menu__lines::before{
+    top: -6px;
+}
+.burger-menu__lines::after{
+    top: 6px;
+}
+.burger-menu__active .burger-menu__lines{
+    background-color: transparent;
+}
+.burger-menu__active .burger-menu__lines::before{
+    top: 0;
+    transform: rotate(45deg);
+}
+.burger-menu__active .burger-menu__lines::after{
+    top: 0;
+    transform: rotate(-45deg);
+}
+.burger-menu__active .burger-menu__btn{
+    position: fixed;
+    margin: 20px 20px 0 0;
+}
+
+.burger-menu__overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 10;
+}
+.burger-menu__active .burger-menu__overlay{
     display: block;
+    background-color: rgba(0, 0, 0, 0.5);
 }
-.head__burger--item{
-    width: 22px;
-    height: 2px;
-    border-radius: 8px;
+.head__menu-nav{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    transition: 250ms;
+    z-index: 20;
     background-color: #fff;
 }
-.head__burger--item2{
-    width: 22px;
-    height: 2px;
-    border-radius: 8px;
-    background-color: #fff;
-    margin: 4px 0;
+.burger-menu__active .head__menu-nav  {
+    right: 0;
 }
-.head__burger--item3{
-    width: 22px;
-    height: 2px;
-    border-radius: 8px;
-    background-color: #fff;
+
+@media screen and(min-width: 480px) {
+    .head__menu-nav{
+        width: 320px;
+    }
 }
+
 @media screen and(min-width: 1024px) {
-    .head__burger {
+    .burger-menu__btn{
+        display: none;
+    }
+    .head__menu-nav{
+        width: 445px;
+    }
+    .head__line{
+        display: none;
+    }
+    .head__menu-nav{
+        position: static;
+        display: block;
+        right: 0;
+        background-color: transparent;
+    }
+    .burger-menu__active  .burger-menu__overlay {
         display: none;
     }
 }

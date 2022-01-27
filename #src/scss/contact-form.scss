@@ -1,6 +1,6 @@
 .form{
     background-color: #fff;
-    padding: 36px 0;
+    padding: 65px 0;
 }
 .form-head__title{
     @include title;
@@ -21,8 +21,12 @@
 }
 .form__style{
     @include form-style;
-    width: 100%;
-    margin: 24px 0 0;
+    width: 92%;
+    margin: 24px auto 0;
+    padding: 15px 0 15px 20px;
+}
+.form__style--question{
+    height: 18px;
 }
 .form__style--top{
     margin: 0;
@@ -30,7 +34,6 @@
 .form__style::placeholder{
     font-size: 14px;
     font-weight: 400;
-    padding: 12px 0 0 22px;
 }
 .form__style:hover,
 .form__style:focus{
@@ -81,11 +84,9 @@
 }
 
 @media screen and(min-width: 768px) {
-    .form{
-        padding: 65px 0;
-    }
     .form__container{
         display: flex;
+        justify-content: space-between;
     }
     .form__head {
         width: 50%;
@@ -103,6 +104,9 @@
         width: 350px;
         margin: 0;
      }
+     .form__style{
+        width: 94%;
+    }
 }
 
 @media screen and(min-width: 1024px) {
@@ -113,7 +117,7 @@
          display: flex;
      }
      .form__style--width{
-         width: 240px;
+         width: 213px;
      }
      .form__style--margin{
          margin: 0 0 0 30px;
@@ -136,7 +140,7 @@
         padding: 26px 0 36px;
     }
     .form__style--width{
-        width: 255px;
+        width: 228px;
     }
     .form__style--margin{
         margin: 0 0 0 28px;

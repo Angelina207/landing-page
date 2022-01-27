@@ -27,7 +27,16 @@
 @mixin form-style {
     border: solid 1px #333333;
     border-radius: 6px;
-    height: 40px;
     margin: 0 auto;
     padding: 0;
+}
+@mixin burger {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: $accent;
+    border-radius: 8px;
+    left: calc(50% - 10px);
 }
