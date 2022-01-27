@@ -79,75 +79,6 @@ textarea {
   height: 100vh;
 }
 
-.burger-menu__btn {
-  position: relative;
-  display: inline-block;
-  top: 2px;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  z-index: 30;
-  background-color: #fff;
-}
-
-.burger-menu__lines,
-.burger-menu__lines::before,
-.burger-menu__lines::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 2px;
-  background-color: #ED4C5C;
-  border-radius: 8px;
-  left: calc(50% - 10px);
-  top: calc(50% - 1px);
-  transition: 250ms;
-}
-
-.burger-menu__lines::before {
-  top: -6px;
-}
-
-.burger-menu__lines::after {
-  top: 6px;
-}
-
-.burger-menu__active .burger-menu__lines {
-  background-color: transparent;
-}
-
-.burger-menu__active .burger-menu__lines::before {
-  top: 0;
-  transform: rotate(45deg);
-}
-
-.burger-menu__active .burger-menu__lines::after {
-  top: 0;
-  transform: rotate(-45deg);
-}
-
-.burger-menu__active .burger-menu__btn {
-  position: fixed;
-  margin: 20px 20px 0 0;
-}
-
-.burger-menu__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: none;
-  z-index: 10;
-}
-
-.burger-menu__active .burger-menu__overlay {
-  display: block;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .head__wrapp {
   display: flex;
   padding: 25px 0;
@@ -175,21 +106,6 @@ textarea {
   font-weight: 600;
   color: #fff;
   letter-spacing: 0.03em;
-}
-
-.head__menu-nav {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: -100%;
-  transition: 250ms;
-  z-index: 20;
-  background-color: #fff;
-}
-
-.burger-menu__active .head__menu-nav {
-  right: 0;
 }
 
 .head__list {
@@ -261,6 +177,90 @@ textarea {
   background-color: transparent;
   color: #fff;
   border: solid 1px #fff;
+}
+
+.burger-menu__btn {
+  position: relative;
+  display: inline-block;
+  top: 2px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  z-index: 30;
+  background-color: #fff;
+}
+
+.burger-menu__lines,
+.burger-menu__lines::before,
+.burger-menu__lines::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #ED4C5C;
+  border-radius: 8px;
+  left: calc(50% - 10px);
+  top: calc(50% - 1px);
+  transition: 250ms;
+}
+
+.burger-menu__lines::before {
+  top: -6px;
+}
+
+.burger-menu__lines::after {
+  top: 6px;
+}
+
+.burger-menu__active .burger-menu__lines {
+  background-color: transparent;
+}
+
+.burger-menu__active .burger-menu__lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.burger-menu__active .burger-menu__lines::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-menu__active .burger-menu__btn {
+  position: fixed;
+  margin: 20px 20px 0 0;
+}
+
+.burger-menu__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  z-index: 10;
+}
+
+.burger-menu__active .burger-menu__overlay {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.head__menu-nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  transition: 250ms;
+  z-index: 20;
+  background-color: #fff;
+}
+
+.burger-menu__active .head__menu-nav {
+  right: 0;
 }
 
 .about {
@@ -480,7 +480,7 @@ textarea {
 }
 
 .focused-sec {
-  padding: 36px 0;
+  padding: 65px 0;
   background-color: #ED4C5C;
 }
 
@@ -544,7 +544,7 @@ textarea {
 
 .form {
   background-color: #fff;
-  padding: 36px 0;
+  padding: 65px 0;
 }
 
 .form-head__title {
@@ -572,11 +572,15 @@ textarea {
 .form__style {
   border: solid 1px #333333;
   border-radius: 6px;
-  height: 40px;
   margin: 0 auto;
   padding: 0;
-  width: 100%;
-  margin: 24px 0 0;
+  width: 92%;
+  margin: 24px auto 0;
+  padding: 15px 0 15px 20px;
+}
+
+.form__style--question {
+  height: 18px;
 }
 
 .form__style--top {
@@ -586,19 +590,16 @@ textarea {
 .form__style::-moz-placeholder {
   font-size: 14px;
   font-weight: 400;
-  padding: 12px 0 0 22px;
 }
 
 .form__style:-ms-input-placeholder {
   font-size: 14px;
   font-weight: 400;
-  padding: 12px 0 0 22px;
 }
 
 .form__style::placeholder {
   font-size: 14px;
   font-weight: 400;
-  padding: 12px 0 0 22px;
 }
 
 .form__style:hover,
@@ -719,6 +720,7 @@ footer {
   font-weight: 400;
   line-height: 19px;
   color: #000;
+  transition: 250ms;
 }
 
 .foo-contact__connect:focus,
@@ -817,10 +819,6 @@ footer {
     max-width: 480px;
   }
 
-  .head__menu-nav {
-    width: 320px;
-  }
-
   .hero__title {
     font-size: 48px;
   }
@@ -829,6 +827,10 @@ footer {
     width: 72%;
     line-height: 26px;
     padding: 28px 0 32px;
+  }
+
+  .head__menu-nav {
+    width: 320px;
   }
 
   .about__img {
@@ -982,10 +984,6 @@ footer {
     line-height: 43px;
   }
 
-  .focused-sec {
-    padding: 65px 0;
-  }
-
   .focused__wrapp {
     display: flex;
   }
@@ -1012,12 +1010,9 @@ footer {
     line-height: 43px;
   }
 
-  .form {
-    padding: 65px 0;
-  }
-
   .form__container {
     display: flex;
+    justify-content: space-between;
   }
 
   .form__head {
@@ -1038,6 +1033,10 @@ footer {
   .form__content {
     width: 350px;
     margin: 0;
+  }
+
+  .form__style {
+    width: 94%;
   }
 
   .foo__content {
@@ -1082,27 +1081,23 @@ footer {
 
   .head__wrapp {
     padding: 50px 0 25px;
+    display: flex;
+    align-items: center;
   }
 
   .head__svg {
-    margin: 8px 0 0;
     width: 26px;
     height: 19px;
   }
 
   .head__logo {
-    display: flex;
     font-size: 18px;
-    align-items: center;
-  }
-
-  .head__menu {
-    display: none;
   }
 
   .head__list {
     display: flex;
     align-items: center;
+    padding: 0;
   }
 
   .head__items {
@@ -1114,8 +1109,9 @@ footer {
   }
 
   .head__link {
-    position: relative;
     color: #fff;
+    font-size: 14px;
+    transition: 250ms;
   }
 
   .head__link::before {
@@ -1137,6 +1133,12 @@ footer {
   .head__link:active::before {
     transform: translateX(0%);
     opacity: 1;
+  }
+
+  .head__link:hover,
+  .head__link:focus {
+    text-shadow: none;
+    color: #fff;
   }
 
   .head__btn {
@@ -1169,7 +1171,26 @@ footer {
     padding: 39px 0;
   }
 
-  .head__burger {
+  .burger-menu__btn {
+    display: none;
+  }
+
+  .head__menu-nav {
+    width: 445px;
+  }
+
+  .head__line {
+    display: none;
+  }
+
+  .head__menu-nav {
+    position: static;
+    display: block;
+    right: 0;
+    background-color: transparent;
+  }
+
+  .burger-menu__active .burger-menu__overlay {
     display: none;
   }
 
@@ -1311,7 +1332,7 @@ footer {
   }
 
   .form__style--width {
-    width: 240px;
+    width: 213px;
   }
 
   .form__style--margin {
@@ -1409,7 +1430,7 @@ footer {
   }
 
   .form__style--width {
-    width: 255px;
+    width: 228px;
   }
 
   .form__style--margin {

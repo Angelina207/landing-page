@@ -77,7 +77,7 @@ function burgerMenu(selector) {
     }); 
 
     links.on('click', () => toggleMenu());
-    overlay.om('click', () => toggleMenu());
+    overlay.on('click', () => toggleMenu());
 
     function toggleMenu() {
 
