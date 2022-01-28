@@ -2,27 +2,11 @@
 
 .features{
     background-color: $background-sec;
-    padding: 65px 0 124px;
-    
+    padding: 65px 0 94px;  
 }
 .features__title{
     @include title;
 }
-
-// Стили слайдера
-
-.slide-container{
-    position: relative;
-    width: 270px;
-    height: 360px;
-    margin: 0 auto;
-    overflow: hidden;
- }
-
-.slide-track{
-    display: flex;
-    transition: 1s;
- }
 
 //  Стили карточек
 
@@ -36,22 +20,22 @@
     justify-content: space-between;
     width: 270px;
     margin: 0 auto;
-    }
+    padding-bottom: 170px;
+}
+.features__img{ 
+    border-radius: 8px;
+    width: 270px;
+    height: 174px;
+}
 .features__column{
     position: absolute;
-    top: 60%;
+    top: 32%;
     left: calc(50% - 115px);
     z-index: 5;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
     width: 230px;
-}
-
-.features__img{ 
-    border-radius: 8px;
-    width: 270px;
-    height: 174px;
 }
 .features__subtitle{
     @include subtitle;
@@ -81,40 +65,7 @@
     }
 }
 
-// Стили для кнопок слайда
-
- .slide-btn__wrapp{
-     display: flex;
-     justify-content: center;
- }
-.slide-btn{
-    position: relative;
-    background-color: $accent;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    transition: 250ms;
-    z-index: 5;
-    margin: 0 auto;
-    &:hover,
-    &:focus {
-        box-shadow: 1px 3px 10px rgba(140, 136, 133, 1);
-    }
-}
-.slide-btn-icon{
-position: absolute;
-top: calc(50% - 10px);
-left: calc(50% - 10px);
-}
-
 @media screen and(min-width: 380px) {
-    
-    .slide-container{
-        width: 320px;
-        height: 380px;
-     }
-
-    //  Стили карточек
     
     .features__item{
         width: 320px;
@@ -122,6 +73,7 @@ left: calc(50% - 10px);
 
     .features__column{
         left: calc(50% - 125px);
+        top: 35%;
         width: 250px;
     }
     
@@ -137,15 +89,10 @@ left: calc(50% - 10px);
 
 
 @media screen and(min-width: 480px) {
-    
-    .slide-container{
-        width: 350px;
-        height: 450px;
-     }
+
      .features__list{
         margin: 63px auto 0;
     }
-    //  Стили карточек
     
     .features__item{
         width: 350px;
@@ -154,6 +101,7 @@ left: calc(50% - 10px);
     .features__column{
         left: calc(50% - 146.5px);
         width: 293px;
+        top: 38%;
     }
     
     .features__img{ 
@@ -173,34 +121,63 @@ left: calc(50% - 10px);
     }
 }
 
-@media screen and(min-width: 768px) {
-.feature__content-wrapp{
-    position: relative;
-}
-.slide-btn__wrapp{
-    display: block;
-}
-.slide-btn{
-    top: calc(50% - 20px);
-}
-.btn-next{
-    position: absolute;
-    right: 10%;
+@media screen and(min-width: 1024px) {
+    .features{
+        padding: 65px 0 124px;  
     }
-.btn-prev{
-    position: absolute;
-    left: 10%;
+    .features__list{
+        margin: 63px 0 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .features__item{
+        justify-items: start;
+        width: 300px;
+        margin: 0;
+        padding-bottom: 125px;
+    }
+    .features__img{ 
+        border-radius: 8px;
+        width: 300px;
+        height: 194px;
+    }
+    .features__column{
+        top: 39%;
+        left: calc(50% - 137.5px);
+        width: 275px;
+    }
+    .features__subtitle{
+        padding: 26px 0 0;
+        width: 90%;
+    }
+    .features__desc{
+        padding: 15px 0 17px;
+        width: 75%;
     }
 }
 
-@media screen and(min-width: 1024px) {
-    .slide-container{
-        display: flex;
-        width: 100%;
-        overflow: inherit;
-     } 
+@media screen and(min-width: 1440px) {
+    .features__item{
+        width: 350px;
+        padding-bottom: 100px;
+    }
+
+    .features__column{
+        left: calc(50% - 146.5px);
+        width: 293px;
+        top: 45%;
+    }
     
-    .slide-btn__wrapp{
-        display: none;
+    .features__img{ 
+        width: 350px;
+        height: 250px;
+    }
+    .features__subtitle{
+        width: 85%;
+        padding: 33px 0 0;
+    }
+    .features__desc{
+        padding: 20px 0 17px;
+        width: 75%;
     }
 }
