@@ -3,7 +3,7 @@
 function burgerMenu(selector) {
     let menu = document.querySelector(selector);
     let burgerBtn = menu.querySelector('.burger-menu__btn');
-    let links = menu.querySelector('.head__link');
+    let links = menu.querySelectorAll('.head__link');
     let overlay = menu.querySelector('.burger-menu__overlay');
 
     burgerBtn.addEventListener('click', (e) => {
@@ -11,7 +11,9 @@ function burgerMenu(selector) {
         toggleMenu();
     }); 
 
-    links.addEventListener('click', () => toggleMenu());
+    [].forEach.call(links, function (el) {
+        el.addEventListener("click", () => toggleMenu());
+    });
     overlay.addEventListener('click', () => toggleMenu());
 
     function toggleMenu() {
