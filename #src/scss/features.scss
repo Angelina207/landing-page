@@ -10,55 +10,54 @@
 
 //  Стили карточек
 
-.features__list{
+.features__content{
     margin: 38px auto 0;
 }
-.features__item{
+.features__card{
     position: relative;
     text-align: center;
-    justify-items: center;
-    justify-content: space-between;
     width: 270px;
     margin: 0 auto;
     padding-bottom: 170px;
 }
-.features__img{ 
+.features-card__img{ 
     border-radius: 8px;
-    width: 270px;
+    width: 100%;
     height: 174px;
 }
-.features__column{
+.features-card__column{
     position: absolute;
     top: 32%;
-    left: calc(50% - 115px);
+    left: calc(50% - 42.5%);
     z-index: 5;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
-    width: 230px;
+    width: 85%;
 }
-.features__subtitle{
+.features-card__subtitle{
     @include subtitle;
     display: inline-block;
     padding: 26px 0 0;
     width: 90%;
 }
-.features__desc{
+.features-card__desc{
     @include text;
     display: inline-block;
     padding: 15px 0 17px;
     width: 75%;
 }
 
-//  Стили кнопки Read More
+//  Стили для сслыки Read More
 
-.features__btn{
-    background-color: transparent;
+.features-card__link{
     color: $accent;
     font-size: 12px;
     font-weight: 700;
     margin: 0 0 18px;
     transition: 250ms;
+    width: 80px;
+    margin: 0 auto 25px;
     &:hover,
     &:focus {
         text-shadow:  1px 3px 10px rgba(140, 136, 133, 1);
@@ -67,22 +66,14 @@
 
 @media screen and(min-width: 380px) {
     
-    .features__item{
+    .features-card__card{
         width: 320px;
     }
 
-    .features__column{
-        left: calc(50% - 125px);
+    .features-card__column{
         top: 35%;
-        width: 250px;
     }
-    
-    .features__img{ 
-        width: 320px;
-        height: 214px;
-    }
-
-    .features__desc{
+    .features-card__desc{
         width: 80%;
     }
 }
@@ -90,34 +81,28 @@
 
 @media screen and(min-width: 480px) {
 
-     .features__list{
+     .features__content{
         margin: 63px auto 0;
     }
     
-    .features__item{
+    .features__card{
         width: 350px;
     }
 
-    .features__column{
-        left: calc(50% - 146.5px);
-        width: 293px;
+    .features-card__column{
         top: 38%;
     }
     
-    .features__img{ 
-        width: 350px;
+    .features-card__img{ 
         height: 250px;
     }
-    .features__subtitle{
+    .features-card__subtitle{
         width: 80%;
         padding: 33px 0 0;
     }
-    .features__desc{
+    .features-card__desc{
         padding: 20px 0 17px;
         width: 75%;
-    }
-    .features__btn{
-        margin: 0 0 25px;
     }
 }
 
@@ -125,59 +110,48 @@
     .features{
         padding: 65px 0 124px;  
     }
-    .features__list{
+    .features__content{
         margin: 63px 0 0;
         display: flex;
         justify-content: space-between;
     }
-    .features__item{
-        justify-items: start;
+    .features__card{
         width: 300px;
         margin: 0;
         padding-bottom: 125px;
     }
-    .features__img{ 
-        border-radius: 8px;
-        width: 300px;
+    .features-card__img{ 
         height: 194px;
     }
-    .features__column{
+    .features-card__column{
         top: 39%;
-        left: calc(50% - 137.5px);
-        width: 275px;
     }
-    .features__subtitle{
-        padding: 26px 0 0;
+    .features-card__subtitle{
         width: 90%;
     }
-    .features__desc{
-        padding: 15px 0 17px;
-        width: 75%;
+    .features-card__desc{
+        width: 80%;
     }
 }
 
 @media screen and(min-width: 1440px) {
-    .features__item{
-        width: 350px;
+
+    .features__card{
+        width: 405px;
         padding-bottom: 100px;
     }
 
-    .features__column{
-        left: calc(50% - 146.5px);
-        width: 293px;
+    .features-card__column{
         top: 45%;
     }
     
-    .features__img{ 
-        width: 350px;
+    .features-card__img{ 
         height: 250px;
     }
-    .features__subtitle{
-        width: 85%;
-        padding: 33px 0 0;
+    .features-card__subtitle{
+        width: 70%;
     }
-    .features__desc{
-        padding: 20px 0 17px;
-        width: 75%;
+    .features-card__desc{
+        width: 65%;
     }
 }

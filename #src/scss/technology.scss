@@ -1,9 +1,9 @@
 .tech{
-    padding: 65px 0;
+    padding: 65px 0 104px;
 }
 .tech__title{
     @include title;
-    padding: 0 0 46px;
+    padding: 0 0 56px;
 }
  .tect__column{
     position: relative;
@@ -12,7 +12,7 @@
      text-align: center;
      align-items: center;
      width: 255px;
-     height: 226px;
+     height: 210px;
      margin: 0 auto;
  }
  .tech__number{
@@ -24,7 +24,7 @@
  }
 .tech__subtitle{
     @include subtitle;
-    padding: 129px 0 0;
+    padding: 139px 0 0;
 }
  .tech__text{
     @include text;
@@ -32,18 +32,29 @@
     width: 100%;
   
 }
-  .tech__svg {
+
+// стилизация иконок
+.tech__svg-cloud{
     position: absolute;
-    top: 25%;
-    left: calc(50% - 31px);
-    width: 62px;
-    height: 62px;
-  }
-  .tech__svg--size{
-      left: calc(50% - 21px);
-      width: 42px;
-      height: 48px;
-  }
+    width: 80px;
+    height: 80px;
+    left: calc(50% - 40px);
+    top: calc(50% - 53px);
+}
+.tech__svg-search{
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    left: calc(50% - 33px);
+    top: calc(50% - 44px);
+}
+.tech__svg-type{
+    position: absolute;
+    width: 48px;
+    height: 54px;
+    left: calc(50% - 24px);
+    top: calc(50% - 41px);
+}
 
   @media screen and(min-width:768px) {
       
@@ -55,17 +66,9 @@
         grid-gap: 30px 90px;
         margin: 0 auto;
     }
-    .tech__subtitle{
-        padding: 139px 0 0;
-    }
   }
   @media screen and(min-width:1024px){
-    .tech{
-        padding: 65px 0 104px;
-}
-    .tech__title{
-        padding: 0 0 56px;
-    }
+
     .tech__text{
         width: 90%;
     }
@@ -75,20 +78,6 @@
     .tect__column{
         margin: 0;
     }
-    .tech__svg {
-        position: absolute;
-        left: calc(50% - 35px);
-        width: 70px;
-        height: 70px;
-      }
-      .tech__svg--size-search{
-        height: 62px;
-      }
-      .tech__svg--size{
-          left: calc(50% - 31px);
-          width: 62px;
-          height: 54px;
-      }
   }
   @media screen and (min-width: 1440px) {
     .tech__row{

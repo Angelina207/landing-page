@@ -1,5 +1,7 @@
+// Оформление текста секции
+
 .focused-sec{
-    padding: 65px 0;
+    padding: 69px 0;
     background-color: #ED4C5C;
 }
 .focused__title{
@@ -10,16 +12,20 @@
 .focused__desc{
     @include desc;
     color: #fff;
-    padding: 22px 0;
+    padding: 26px 0;
 }
 .focused_list{
     display: flex;
     align-items: center;
 }
 .focused__item{
-    padding-right: 20px;
+    padding-right: 28px;
 }
+
+// Стилизация иконок
+
 .focused__icon{
+      display: block;
     transition: 250ms;
 }
 .focused__icon:hover,
@@ -28,19 +34,22 @@
         transform: translateY(4px);
     }
 .focused__icon--google-size{
-    width: 28px;
-    height: 27px;
+    width: 32px;
+    height: 32px;
 }
 .focused__icon--app-store-size{
-    width: 28px;
-    height: 27px;
+    width: 30px;
+    height: 30px;
 }
 .focused__icon--windows-size{
-    width: 22px;
-    height: 25px;
+    width: 26px;
+    height: 26px;
 }
+
+//  Фото секции
+
 .focused__img{
-    max-width: 100%;
+    width: 100%;
     border-radius: 15px;
     margin: 0 auto;
     padding: 25px 0 0;
@@ -55,80 +64,36 @@
 @media screen and(min-width: 768px) {
     .focused__wrapp{
         display: flex;
-    }
-    .focused__title{
-        display: block;
-        width: 80%;
-    }
-    .focused__desc{
-        display: block;
-        width: 80%;
-        padding: 26px 0;
+        align-items: center;
     }
     .focused__img{
         width: 350px;
         height: 258px;
+        margin: 0;
         padding: 0;
     }
 }
 @media screen and(min-width: 1024px) {
-    .focused-sec{
-        padding: 69px 0;
-        }
-    .focused__wrapp{
-        flex-direction: row;
-        align-items: center;
-    }
-    .focused__title{
-        width: 90%;
-    }
-    .focused__desc{
-        padding: 34px 0 30px;
-        }
-    .focused__img{
-        width: 445px;
-        height: 311px;
-    }
-    .focused__item{
-        display: block;
-        padding-right: 28px;
-    }
-    .focused__icon{
-        transition: 200ms;
-    }
-    .focused__icon--google-size{
-        width: 32px;
-        height: 32px;
-    }
-    .focused__icon--app-store-size{
-        width: 30px;
-        height: 30px;
-    }
-    .focused__icon--windows-size{
-        width: 26px;
-        height: 26px;
+
+    .focused__content{
+        width: 50%;
+        padding-right: 50px;
     }
 }
 @media screen and(min-width: 1440px) {
+    
     .focused-sec{
         padding: 95px 0;
         }
-    .focused__content{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
     .focused__title{
-        width: 60%;
+        width: 70%;
     }
     .focused__desc{
-        width: 65%;
+        width: 70%;
         padding: 34px 0 42px;
         }
     .focused__img{
         width: 445px;
         height: 311px;
-        margin: 0;
-        padding: 0 0 0 130px;
     }
 }

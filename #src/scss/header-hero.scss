@@ -22,25 +22,22 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 24px;
-    height: 17px;
+    width: 26px;
+    height: 19px;
 }
 .head__logo{
     display: inline-block;
     position: relative;
     padding: 0 0 0 32px;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 600;
     color: #fff;
     letter-spacing: 0.03em;
 }
-
-.head__list{
-    padding: 80px 40px;
-}
 .head__line {
     position: relative;
-    width: 100%;
+    left: calc(50% - 40%);
+    width: 80%;
     height: 2px;
     border: none;
     margin: 20px 0;
@@ -51,6 +48,7 @@
     font-size: 18px;
     font-weight: 400;
     transition: 250ms;
+    padding-left: 40px;
 }
 .head__link:hover,
 .head__link:focus {
@@ -83,8 +81,9 @@
     display: inline-block;
     padding: 26px 0 36px;
     font-size: 18px;
+    font-weight: 400;
     width: 80%;
-    line-height: 24px;
+    line-height: 1.75;
 }
 .hero__btn{
     width: 160px;
@@ -109,7 +108,6 @@
     }
     .hero__subtitle{
         width: 72%;
-        line-height: 26px;
         padding: 28px 0 32px;
     }
 }
@@ -132,39 +130,26 @@
 
 .head__wrapp{
     padding: 50px 0 25px;
-    display: flex;
-    align-items: center; 
+    align-items: center;
+    justify-content: space-between; 
 }
-.head__svg{
-    width: 26px;
-    height: 19px;
-}
-    .head__logo{
-        font-size: 18px;
-    }
-    .head__list{
-        display: flex;
-        align-items: center;   
-        padding: 0; 
-    }
-    .head__items {
-        padding: 0 0 0 16px;
-    }
-    .head__items:nth-child(1){
-        padding: 0;
-    }
+
+// Стилизация ссылок в  навигации
+
     .head__link {
+        position: relative;
+        display: inline-block;
         color: #fff;
         font-size: 14px;
-        transition: 250ms;
+        padding: 0 17px 0 0;
     }
+
     .head__link::before {
         content: "";
         position: absolute;
         left: 0;
-        bottom: -10%;
-        display: block;
-        width: 100%;
+        bottom: -15%;
+        width: calc(100% - 17px);
         height: 3px;
         background-color:  #fff;
         border-radius: 6px;
@@ -182,6 +167,8 @@
         text-shadow: none;
         color: #fff;
     }
+
+// Стилизация кнопки под навигацией
 
     .head__btn{
         display: block; 
@@ -218,7 +205,9 @@
 }
 
 @media screen and(min-width: 1440px) {
-
+    .head__wrapp {
+        justify-content: start;
+    }
     .hero__subtitle{
         width: 50%;
     }
