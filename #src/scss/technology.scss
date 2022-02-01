@@ -5,32 +5,31 @@
     @include title;
     padding: 0 0 56px;
 }
- .tect__column{
+.tect__column{
     position: relative;
-     display: flex;
-     flex-direction: column;
-     text-align: center;
-     align-items: center;
-     width: 255px;
-     height: 210px;
-     margin: 0 auto;
- }
- .tech__number{
-     position: absolute;
-     object-fit: cover;
-     font-size: 100px;
-     font-weight: 700;
-     color:  rgba(16, 16, 16, 0.08);
- }
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 255px;
+    height: 210px;
+    margin: 0 auto;
+}
+.tech__number{
+    position: absolute;
+    object-fit: cover;
+    font-size: 100px;
+    font-weight: 700;
+    color:  rgba(16, 16, 16, 0.08);
+}
 .tech__subtitle{
     @include subtitle;
     padding: 139px 0 0;
 }
- .tech__text{
+.tech__text{
     @include text;
     padding: 10px 0 0;
     width: 100%;
-  
 }
 
 // стилизация иконок
@@ -56,38 +55,28 @@
     top: calc(50% - 41px);
 }
 
-  @media screen and(min-width:768px) {
+@media screen and(min-width:768px) {
       
     .tech__row{
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        display: grid;
-        grid-template-columns: repeat(2, 256px);
-        grid-template-rows: repeat(2, 225px);
-        grid-gap: 30px 90px;
-        margin: 0 auto;
-    }
-  }
-  @media screen and(min-width:1024px){
+}
+}
+@media screen and(min-width:1024px){
 
     .tech__text{
         width: 90%;
     }
-    .tech__row{
-        grid-gap: 40px 120px;
-    }
     .tect__column{
         margin: 0;
-    }
-  }
-  @media screen and (min-width: 1440px) {
-    .tech__row{
-        display: flex;
-        grid-gap: 0 0;
-    }
+}
+}
+@media screen and (min-width: 1440px) {
     .tect__column{
         margin-right: auto;
     }
     .tect__column:last-child {
         margin-right: 0;
-    }
-  }
+}
+}
