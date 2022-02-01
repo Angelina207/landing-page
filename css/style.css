@@ -397,9 +397,9 @@ textarea {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  width: 255px;
+  width: 50%;
   height: 210px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
 }
 
 .tech__number {
@@ -880,7 +880,11 @@ footer {
   .tech__row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+  }
+
+  .tech__text {
+    width: 60%;
   }
 
   .focused__title {
@@ -1057,6 +1061,7 @@ footer {
     display: flex;
     width: 462px;
     padding: 0;
+    z-index: 50;
     background-color: transparent;
   }
 
@@ -1105,12 +1110,13 @@ footer {
     width: 80%;
   }
 
-  .tech__text {
-    width: 90%;
+  .tect__column {
+    width: 35%;
+    margin: 0 0 30px;
   }
 
-  .tect__column {
-    margin: 0;
+  .tech__text {
+    width: 196px;
   }
 
   .focused__content {
@@ -1205,11 +1211,8 @@ footer {
   }
 
   .tect__column {
-    margin-right: auto;
-  }
-
-  .tect__column:last-child {
-    margin-right: 0;
+    width: 255px;
+    margin: 0;
   }
 
   .focused-sec {
