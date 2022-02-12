@@ -11,9 +11,9 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    width: 255px;
+    width: 50%;
     height: 210px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
 }
 .tech__number{
     position: absolute;
@@ -60,23 +60,24 @@
     .tech__row{
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-evenly;
+}
+.tech__text{
+    width: 60%;
 }
 }
 @media screen and(min-width:1024px){
-
-    .tech__text{
-        width: 90%;
-    }
-    .tect__column{
-        margin: 0;
+.tect__column{
+    width: 35%;
+    margin: 0 0 30px;
+}
+.tech__text{
+    width: 196px;
 }
 }
 @media screen and (min-width: 1440px) {
     .tect__column{
-        margin-right: auto;
+        width: 255px;
+        margin: 0;
     }
-    .tect__column:last-child {
-        margin-right: 0;
-}
 }

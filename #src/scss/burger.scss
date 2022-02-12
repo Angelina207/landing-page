@@ -37,7 +37,6 @@
     position: fixed;
     margin: 20px 20px 0 0;
 }
-
 .burger-menu__overlay{
     position: fixed;
     top: 0;
@@ -73,6 +72,9 @@
 }
 
 @media screen and(min-width: 1024px) {
+    .burger-menu__active .burger-menu__overlay {
+        display: none;
+    }
     .burger-menu__btn{
         display: none;
     }
@@ -84,6 +86,7 @@
         display: flex;
         width: 462px;
         padding: 0;
+        z-index: 50;
         background-color: transparent;
     }
 }
