@@ -1048,6 +1048,10 @@ footer {
     padding: 39px 0;
   }
 
+  .burger-menu__active .burger-menu__overlay {
+    display: none;
+  }
+
   .burger-menu__btn {
     display: none;
   }

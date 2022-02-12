@@ -19,12 +19,12 @@ function burgerMenu(selector) {
     function toggleMenu() {
         menu.classList.toggle("burger-menu__active");
         if (menu.classList.contains("burger-menu__active")) {
-            document.body.style.overflow = "hidden";
+            document.body.style.overflow = "scroll";
         } else {
             document.body.style.overflow = "visible";
         }
     }
-}
+};
 burgerMenu('.burger__menu');
 
 
