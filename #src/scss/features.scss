@@ -27,6 +27,9 @@
 }
 .content-card__column{
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     top: 32%;
     left: calc(50% - 42.5%);
     z-index: 5;
