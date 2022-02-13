@@ -13,19 +13,19 @@
 .features__content{
     margin: 38px auto 0;
 }
-.features__card{
+.content-card{
     position: relative;
     text-align: center;
     width: 270px;
     margin: 0 auto;
     padding-bottom: 170px;
 }
-.features-card__img{ 
+.content-card__img{ 
     border-radius: 8px;
     width: 100%;
     height: 174px;
 }
-.features-card__column{
+.content-card__column{
     position: absolute;
     top: 32%;
     left: calc(50% - 42.5%);
@@ -35,13 +35,13 @@
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
     width: 85%;
 }
-.features-card__subtitle{
+.content-card__subtitle{
     @include subtitle;
     display: inline-block;
     padding: 26px 0 0;
     width: 90%;
 }
-.features-card__desc{
+.content-card__desc{
     @include text;
     display: inline-block;
     padding: 15px 0 17px;
@@ -50,13 +50,12 @@
 
 //  Стили для сслыки Read More
 
-.features-card__link{
+.content-card__link{
     color: $accent;
     font-size: 12px;
     font-weight: 700;
     margin: 0 0 18px;
     transition: 250ms;
-    width: 80px;
     margin: 0 auto 25px;
     &:hover,
     &:focus {
@@ -65,15 +64,11 @@
 }
 
 @media screen and(min-width: 380px) {
-    
-    .features-card__card{
-        width: 320px;
-    }
 
-    .features-card__column{
+    .content-card__column{
         top: 35%;
     }
-    .features-card__desc{
+    .content-card__desc{
         width: 80%;
     }
 }
@@ -81,22 +76,22 @@
 
 @media screen and(min-width: 480px) {
 
-     .features__content{
+    .features__content{
         margin: 63px auto 0;
     }
     
-    .features__card{
+    .content-card{
         width: 350px;
     }
 
-    .features-card__column{
+    .content-card__column{
         top: 38%;
     }
     
-    .features-card__img{ 
+    .content-card__img{ 
         height: 250px;
     }
-    .features-card__subtitle{
+    .content-card__subtitle{
         width: 80%;
         padding: 33px 0 0;
     }
@@ -115,43 +110,43 @@
         display: flex;
         justify-content: space-between;
     }
-    .features__card{
+    .content-card{
         width: 300px;
         margin: 0;
         padding-bottom: 125px;
     }
-    .features-card__img{ 
+    .content-card__img{ 
         height: 194px;
     }
-    .features-card__column{
+    .content-card__column{
         top: 39%;
     }
-    .features-card__subtitle{
+    .content-card__subtitle{
         width: 90%;
     }
-    .features-card__desc{
+    .content-card__desc{
         width: 80%;
     }
 }
 
 @media screen and(min-width: 1440px) {
 
-    .features__card{
+    .content-card{
         width: 405px;
         padding-bottom: 100px;
     }
 
-    .features-card__column{
+    .content-card__column{
         top: 45%;
     }
     
-    .features-card__img{ 
+    .content-card__img{ 
         height: 250px;
     }
-    .features-card__subtitle{
+    .content-card__subtitle{
         width: 70%;
     }
-    .features-card__desc{
+    .content-card__desc{
         width: 65%;
     }
 }

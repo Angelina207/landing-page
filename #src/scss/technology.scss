@@ -5,7 +5,7 @@
     @include title;
     padding: 0 0 56px;
 }
-.tect__column{
+.tech-row__content{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -15,39 +15,39 @@
     height: 210px;
     margin: 0 auto 30px;
 }
-.tech__number{
+.tech-row__number{
     position: absolute;
     object-fit: cover;
     font-size: 100px;
     font-weight: 700;
     color:  rgba(16, 16, 16, 0.08);
 }
-.tech__subtitle{
+.tech-row__subtitle{
     @include subtitle;
     padding: 139px 0 0;
 }
-.tech__text{
+.tech-row__text{
     @include text;
     padding: 10px 0 0;
     width: 100%;
 }
 
 // стилизация иконок
-.tech__svg-cloud{
+.tech-row__svg-cloud{
     position: absolute;
     width: 80px;
     height: 80px;
     left: calc(50% - 40px);
     top: calc(50% - 53px);
 }
-.tech__svg-search{
+.tech-row__svg-search{
     position: absolute;
     width: 66px;
     height: 66px;
     left: calc(50% - 33px);
     top: calc(50% - 44px);
 }
-.tech__svg-type{
+.tech-row__svg-type{
     position: absolute;
     width: 48px;
     height: 54px;
@@ -62,21 +62,21 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
 }
-.tech__text{
+.tech-row__text{
     width: 60%;
 }
 }
 @media screen and(min-width:1024px){
-.tect__column{
+.tech-row__content{
     width: 35%;
     margin: 0 0 30px;
 }
-.tech__text{
+.tech-row__text{
     width: 196px;
 }
 }
 @media screen and (min-width: 1440px) {
-    .tect__column{
+    .tech-row__content{
         width: 255px;
         margin: 0;
     }

@@ -39,9 +39,13 @@ footer {
 }
 
 // навигация сайта
-
+.foo-nav{
+    display: inline-block;
+}
 .foo-nav__link{
     @include text;
+    display: flex;
+    flex-direction: column;
     color: #000;
     padding: 6px 0 0;
     transition: 250ms;
@@ -56,9 +60,13 @@ footer {
 }
 
 // контакты
-
+.foo-contact__items{
+    display: inline-block;
+}
 .foo-contact__connect{
     @include text;
+    display: flex;
+    flex-direction: column;
     color: #000;
     transition: 250ms;
     &:focus, 

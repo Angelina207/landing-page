@@ -21,9 +21,9 @@
 }
 .form__style{
     @include form-style;
-    width: 92%;
+    width: 90%;
     margin: 24px auto 0;
-    padding: 15px 0 15px 20px;
+    padding: 15px 20px;
 }
 .form__style--top{
     margin: 0;
@@ -102,7 +102,7 @@
         margin: 0;
      }
      .form__style{
-        width: 94%;
+        width: 88%;
     }
 }
 
@@ -113,8 +113,11 @@
      .form__name{
          display: flex;
      }
+     .form__style{
+        width: 92%;
+    }
      .form__style--width{
-         width: 213px;
+         width: 200px;
      }
      .form__style--margin{
          margin: 0 0 0 30px;
@@ -137,7 +140,7 @@
         padding: 26px 0 36px;
     }
     .form__style--width{
-        width: 228px;
+        width: 213px;
     }
     .form__style--margin{
         margin: 0 0 0 28px;
